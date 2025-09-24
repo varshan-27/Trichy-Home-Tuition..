@@ -5,37 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trichy Home Tuition</title>
 <style>
-body { font-family: Arial; padding:50px 20px 20px 20px; background:#f5f5f5; text-align:center; margin:0; }
+body { font-family: 'Arial', sans-serif; padding:50px 20px 20px 20px; background:#f5f5f5; text-align:center; margin:0; }
 .scrollingMessage { position: fixed; top: 0; width: 100%; background: #ffeb3b; color: #000; font-weight: bold; padding: 10px 0; font-size: 18px; white-space: nowrap; overflow: hidden; z-index: 1002; }
 .scrollingMessage span { display: inline-block; padding-left: 100%; animation: scrollText 15s linear infinite; }
 @keyframes scrollText { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-h1 { color:#00796b; margin:80px 0 5px 0; }
+
+h1 { color:#00796b; margin:80px 0 5px 0; font-size:36px; }
 p.address { color:#00796b; font-size:18px; margin:0 0 10px 0; }
+
 #dashboardBtn { position:fixed; top:50px; right:20px; padding:10px 20px; background:#009688; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; z-index:1001; }
 #backBtn { position:fixed; top:50px; left:20px; padding:6px 10px; background:#f44336; color:white; border:none; border-radius:6px; cursor:pointer; font-size:14px; display:none; z-index:1001; }
+
 #dashboardModal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:999; }
 #dashboardContent { background:#fff; max-height:90%; overflow-y:auto; width:90%; padding:20px; border-radius:15px; position:relative; color:#000; }
 #closeDashboard { position:absolute; top:10px; right:10px; background:#f44336; color:white; border:none; padding:6px 12px; border-radius:8px; cursor:pointer; }
+
 #loginContainer { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:1000; }
 #loginBox { background:#fff; padding:20px; border-radius:15px; width:300px; text-align:center; }
 #loginBox input { margin-bottom:10px; width:90%; padding:6px; }
 #loginBox button { width:95%; }
+
 .container { display:flex; flex-direction:column; gap:30px; align-items:center; margin-top:30px; }
-.box { background:#fff; padding:20px 30px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:300px; cursor:pointer; transition:0.3s; display:flex; flex-direction:column; align-items:center; text-align:center; }
+
+.box { background:#fff; padding:20px 30px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:300px; cursor:pointer; transition:0.3s; display:flex; flex-direction:column; align-items:center; text-align:center; font-size:18px; }
 .box:hover { transform:scale(1.05); background:#009688; color:white; }
 .box img { width:80px; height:80px; object-fit:cover; margin-bottom:10px; border-radius:50%; }
-form { background:#fff; padding:20px; border-radius:15px; max-width:400px; margin:30px auto; box-shadow:0 4px 10px rgba(0,0,0,0.1); display:none; position:relative; }
-input, button, select, textarea { padding:10px; margin:8px 0; border-radius:5px; border:1px solid #ccc; }
+
+form { background:#fff; padding:20px; border-radius:15px; max-width:400px; margin:30px auto; box-shadow:0 4px 10px rgba(0,0,0,0.1); display:none; position:relative; font-size:16px; }
+input, button, select, textarea { padding:10px; margin:8px 0; border-radius:5px; border:1px solid #ccc; font-size:16px; }
 input, select, textarea { width: auto; }
-button { background:#00796b; color:white; border:none; cursor:pointer; }
+button { background:#00796b; color:white; border:none; cursor:pointer; font-size:16px; }
 button:hover { background:#004d40; }
-.successMsg { color:green; margin-top:15px; }
-.loading { margin-top:10px; font-weight:bold; color:#00796b; animation:blink 1s infinite; }
+
+.successMsg { color:green; margin-top:15px; font-size:16px; }
+.loading { margin-top:10px; font-weight:bold; color:#00796b; animation:blink 1s infinite; font-size:16px; }
 @keyframes blink { 50% { opacity:0.5; } }
-table { border-collapse: collapse; width:100%; margin-top:20px; color:#000; }
+
+table { border-collapse: collapse; width:100%; margin-top:20px; color:#000; font-size:16px; }
 th, td { border:1px solid #333; padding:8px; text-align:left; color:#000; }
 th { background:#009688; color:white; }
-.deleteBtn { background:#f44336; color:white; border:none; padding:4px 8px; border-radius:5px; cursor:pointer; }
+.deleteBtn { background:#f44336; color:white; border:none; padding:4px 8px; border-radius:5px; cursor:pointer; font-size:14px; }
 .deleteBtn:hover { background:#c62828; }
 
 /* Enhanced highlightBox for professional look */
@@ -46,8 +55,8 @@ th { background:#009688; color:white; }
   padding: 40px 35px; 
   margin: 25px auto; 
   max-width: 950px; 
-  font-size: 20px; 
-  font-weight: bold; 
+  font-size: 18px; 
+  font-weight: 500; 
   line-height: 1.8; 
   color: #000; 
   box-shadow: 0 8px 20px rgba(0,0,0,0.25); 
@@ -61,7 +70,7 @@ th { background:#009688; color:white; }
 .highlightBox h2 { 
   color: #0056b3; 
   margin-bottom: 15px; 
-  font-size: 28px; 
+  font-size: 26px; 
   text-decoration: underline;
 }
 .highlightBox p { 
@@ -88,27 +97,25 @@ th { background:#009688; color:white; }
     <p>We are a dedicated home tuition service focused on helping students excel academically. Our mission is to provide quality education that is both personalized and effective, making learning a rewarding experience for every student.</p>
   </div>
 
-  
-
- 
-
   <div class="box" onclick="showForm('studentForm')"><img src="https://img.icons8.com/color/96/online--v1.png">Student Registration</div>
   <div class="box" onclick="showForm('tutorForm')"><img src="https://img.icons8.com/color/96/teacher.png">Tutor Registration</div>
 
-  <!-- Why Choose Us at the end of the home page -->
+  <div class="highlightBox">
+    <h2>Our Experience</h2>
+    <p>With over 5 years of hands-on experience in home tuition, we have successfully guided numerous students across various subjects and grade levels. Our expertise allows us to identify each student’s strengths and weaknesses, ensuring targeted and impactful teaching.</p>
+  </div>
+
+  <div class="highlightBox">
+    <h2>Our Services</h2>
+    <p>We provide online classes across Tamil Nadu and personalized home tuition in Trichy, ensuring flexible and effective learning for all students. Our tutors provide concept clarity and doubt-solving sessions to strengthen understanding in all subjects.</p>
+  </div>
+
   <div class="highlightBox">
     <h2>Why Choose Us?</h2>
     <p>Choosing us means choosing a tutor who cares about your success. We offer personalized lessons, clear explanations, and continuous support to help students build confidence, strengthen their knowledge, and achieve their academic goals efficiently.</p>
   </div>
- <div class="highlightBox">
-    <h2>Our Services</h2>
-    <p>We provide online classes across Tamil Nadu and personalized home tuition in Trichy, ensuring flexible and effective learning for all students,Our tutors provide concept clarity and doubt-solving sessions to strengthen understanding in all subjects.</p>
-  </div>
-</div>
-<div class="highlightBox">
-    <h2>Our Experience</h2>
-    <p>With over 5 years of hands-on experience in home tuition, we have successfully guided numerous students across various subjects and grade levels. Our expertise allows us to identify each student’s strengths and weaknesses, ensuring targeted and impactful teaching.</p>
-  </div>
+
+</div> <!-- landingPage ends -->
 
 <form id="studentForm">
   <h2>Student Registration</h2>
@@ -222,3 +229,4 @@ window.addEventListener("click",e=>{ if(e.target===dashboardModal) dashboardModa
 </script>
 </body>
 </html>
+``
